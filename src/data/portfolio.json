@@ -1,0 +1,119 @@
+{
+  "personal": {
+    "name": "Leonardo Secotaro",
+    "title": "Staff Engineer",
+    "photo": "/images/leonardo-profile.jpg",
+    "bio": "Experienced Staff Engineer with expertise in software architecture, team leadership, and scalable system design. Passionate about building high-performance applications and mentoring development teams.",
+    "location": "Argentina",
+    "linkedin": "https://www.linkedin.com/in/leonardo-secotaro",
+    "email": "leonardo.secotaro@email.com"
+  },
+  "skills": [
+    {
+      "category": "Programming Languages",
+      "items": ["JavaScript", "TypeScript", "Python", "Java", "Go", "C#"]
+    },
+    {
+      "category": "Frontend Technologies",
+      "items": ["React", "Vue.js", "Angular", "HTML5", "CSS3", "SASS"]
+    },
+    {
+      "category": "Backend Technologies",
+      "items": ["Node.js", ".NET Core", "Spring Boot", "Express.js", "FastAPI"]
+    },
+    {
+      "category": "Databases",
+      "items": ["PostgreSQL", "MongoDB", "Redis", "MySQL", "Elasticsearch"]
+    },
+    {
+      "category": "Cloud & DevOps",
+      "items": ["AWS", "Docker", "Kubernetes", "CI/CD", "Terraform", "Jenkins"]
+    },
+    {
+      "category": "Architecture & Design",
+      "items": ["Microservices", "System Design", "API Design", "Event-Driven Architecture"]
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "company": "Tech Solutions Inc.",
+      "companyUrl": "https://techsolutions.com",
+      "position": "Staff Engineer",
+      "industry": "Technology",
+      "startDate": "2022-01",
+      "endDate": "Present",
+      "description": "Leading technical architecture decisions and mentoring senior engineers. Designed and implemented scalable microservices architecture serving millions of users.",
+      "achievements": [
+        "Reduced system latency by 40% through architecture optimization",
+        "Led migration to cloud-native infrastructure",
+        "Mentored 8+ engineers across multiple teams"
+      ]
+    },
+    {
+      "id": 2,
+      "company": "Innovation Labs",
+      "companyUrl": "https://innovationlabs.com",
+      "position": "Senior Software Engineer",
+      "industry": "Software Development",
+      "startDate": "2019-03",
+      "endDate": "2021-12",
+      "description": "Developed high-performance web applications and APIs. Collaborated with cross-functional teams to deliver complex software solutions.",
+      "achievements": [
+        "Built real-time analytics platform processing 1M+ events/day",
+        "Implemented automated testing reducing bugs by 60%",
+        "Led frontend architecture migration to React"
+      ]
+    },
+    {
+      "id": 3,
+      "company": "Digital Ventures",
+      "companyUrl": "https://digitalventures.com",
+      "position": "Full Stack Developer",
+      "industry": "Digital Agency",
+      "startDate": "2017-06",
+      "endDate": "2019-02",
+      "description": "Developed end-to-end web applications for various clients. Worked with modern JavaScript frameworks and backend technologies.",
+      "achievements": [
+        "Delivered 15+ client projects on time and budget",
+        "Improved application performance by 50%",
+        "Introduced modern development practices and tools"
+      ]
+    }
+  ],
+  "portfolio": [
+    {
+      "id": 1,
+      "title": "E-commerce Platform",
+      "description": "Scalable e-commerce solution built with React and Node.js, handling thousands of concurrent users.",
+      "technologies": ["React", "Node.js", "PostgreSQL", "Redis", "AWS"],
+      "image": "/images/ecommerce-project.jpg",
+      "demoUrl": "https://demo-ecommerce.com",
+      "githubUrl": "https://github.com/leonardo/ecommerce-platform"
+    },
+    {
+      "id": 2,
+      "title": "Real-time Analytics Dashboard",
+      "description": "Interactive dashboard for real-time data visualization with WebSocket integration and responsive design.",
+      "technologies": ["Vue.js", "D3.js", "WebSocket", "Python", "MongoDB"],
+      "image": "/images/analytics-dashboard.jpg",
+      "demoUrl": "https://analytics-demo.com",
+      "githubUrl": "https://github.com/leonardo/analytics-dashboard"
+    },
+    {
+      "id": 3,
+      "title": "Microservices Architecture",
+      "description": "Distributed system architecture with Docker containers, API Gateway, and service mesh implementation.",
+      "technologies": ["Docker", "Kubernetes", "Go", "gRPC", "Istio"],
+      "image": "/images/microservices-arch.jpg",
+      "githubUrl": "https://github.com/leonardo/microservices-demo"
+    }
+  ],
+  "contact": {
+    "email": "leonardo.secotaro@email.com",
+    "linkedin": "https://www.linkedin.com/in/leonardo-secotaro",
+    "github": "https://github.com/leonardo-secotaro",
+    "phone": "+54 11 1234-5678",
+    "location": "Buenos Aires, Argentina"
+  }
+}

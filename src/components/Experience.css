@@ -1,0 +1,642 @@
+/* Experience Component Styles */
+.experience {
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header Section */
+.experience-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.experience-subtitle {
+  font-size: 1.2rem;
+  color: #00ff41;
+  font-family: 'Courier Prime', monospace;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
+/* Main Content */
+.experience-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Timeline Section */
+.experience-timeline {
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #00ff00, #00ff41, #00ff00);
+  box-shadow: 0 0 10px #00ff00;
+  animation: timelineGlow 3s ease-in-out infinite;
+}
+
+@keyframes timelineGlow {
+  0%, 100% { box-shadow: 0 0 10px #00ff00; }
+  50% { box-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00; }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+}
+
+.timeline-item.active {
+  transform: translateX(15px);
+}
+
+.timeline-item.active .timeline-content {
+  border-color: #00ff41;
+  background: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border: 3px solid #00ff00;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.active .timeline-marker {
+  border-color: #00ff41;
+  box-shadow: 0 0 15px #00ff41;
+  background: rgba(0, 255, 65, 0.1);
+}
+
+.marker-code {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: #00ff00;
+}
+
+.timeline-item.active .marker-code {
+  color: #00ff41;
+}
+
+.timeline-content {
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid rgba(0, 255, 0, 0.3);
+}
+
+.timeline-item.active .timeline-content::before {
+  border-right-color: #00ff41;
+}
+
+.company-name {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+}
+
+.company-link {
+  color: #00ff00;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.company-link::after {
+  content: ' ↗';
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.company-link:hover::after {
+  opacity: 1;
+}
+
+.company-link:hover {
+  color: #00ff41;
+  text-shadow: 0 0 10px #00ff41;
+}
+
+.position-title {
+  font-size: 1.1rem;
+  color: #00ff41;
+  margin-bottom: 0.5rem;
+  font-family: 'Courier Prime', monospace;
+  font-weight: 700;
+}
+
+.industry-tag {
+  display: inline-block;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  color: #00ff00;
+  font-family: 'Courier Prime', monospace;
+  margin-bottom: 0.8rem;
+}
+
+.date-range {
+  font-size: 0.9rem;
+  color: #00ff00;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.duration {
+  font-size: 0.8rem;
+  color: #00ff41;
+  font-family: 'Courier Prime', monospace;
+  opacity: 0.8;
+}
+
+/* Details Section */
+.experience-details {
+  position: relative;
+}
+
+.detail-card {
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+  position: sticky;
+  top: 100px;
+  animation: slideInRight 0.5s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.detail-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.detail-position {
+  font-size: 2rem;
+  color: #00ff00;
+  margin-bottom: 0.5rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: 900;
+  text-shadow: 0 0 10px #00ff00;
+}
+
+.detail-company {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+}
+
+.detail-company-link {
+  color: #00ff41;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.detail-company-link:hover {
+  text-shadow: 0 0 10px #00ff41;
+}
+
+.detail-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.detail-industry {
+  background: rgba(0, 255, 65, 0.1);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  border-radius: 15px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  color: #00ff41;
+  font-family: 'Courier Prime', monospace;
+}
+
+.detail-dates {
+  font-size: 1rem;
+  color: #00ff00;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+}
+
+.detail-description {
+  margin-bottom: 2rem;
+}
+
+.detail-description p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #00ff00;
+  font-family: 'Courier Prime', monospace;
+}
+
+/* Achievements Section */
+.achievements-section {
+  position: relative;
+}
+
+.achievements-title {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: #00ff41;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+}
+
+.achievements-bracket {
+  color: #00ff00;
+  font-weight: 900;
+  text-shadow: 0 0 5px #00ff00;
+}
+
+.achievements-list {
+  list-style: none;
+  padding: 0;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: rgba(0, 255, 0, 0.03);
+  border-left: 3px solid #00ff00;
+  border-radius: 0 8px 8px 0;
+  transition: all 0.3s ease;
+  font-family: 'Courier Prime', monospace;
+  line-height: 1.6;
+}
+
+.achievement-item:hover {
+  background: rgba(0, 255, 0, 0.08);
+  border-left-color: #00ff41;
+  transform: translateX(5px);
+}
+
+.achievement-bullet {
+  color: #00ff41;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+/* LinkedIn CTA Section */
+.linkedin-cta {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(0, 255, 0, 0.05);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-size: 1.8rem;
+  color: #00ff00;
+  margin-bottom: 1rem;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+}
+
+.cta-description {
+  font-size: 1.1rem;
+  color: #00ff41;
+  margin-bottom: 2rem;
+  font-family: 'Courier Prime', monospace;
+  line-height: 1.6;
+}
+
+.linkedin-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid #00ff00;
+  color: #00ff00;
+  text-decoration: none;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.linkedin-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.linkedin-button:hover::before {
+  left: 100%;
+}
+
+.linkedin-button:hover {
+  box-shadow: 0 0 20px #00ff00;
+  text-shadow: 0 0 10px #00ff00;
+  transform: translateY(-2px);
+}
+
+.button-code {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.button-text {
+  font-size: 1rem;
+}
+
+/* Matrix Code Background */
+.matrix-code-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0.05;
+}
+
+.code-line {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-family: 'Courier Prime', monospace;
+  font-size: 12px;
+  color: #00ff00;
+  white-space: nowrap;
+  animation: codeScroll 15s linear infinite;
+}
+
+.code-line:nth-child(odd) {
+  animation-direction: reverse;
+  animation-duration: 20s;
+}
+
+@keyframes codeScroll {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.code-char {
+  display: inline-block;
+  animation: charFlicker 0.1s infinite;
+}
+
+@keyframes charFlicker {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .experience-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .detail-card {
+    position: static;
+  }
+  
+  .timeline-item {
+    padding-left: 60px;
+  }
+  
+  .timeline-marker {
+    left: 10px;
+  }
+  
+  .experience-timeline::before {
+    left: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 1rem;
+  }
+  
+  .experience-header {
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-item {
+    padding-left: 50px;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-marker {
+    left: 5px;
+    width: 25px;
+    height: 25px;
+  }
+  
+  .experience-timeline::before {
+    left: 17px;
+  }
+  
+  .marker-code {
+    font-size: 0.5rem;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+  }
+  
+  .company-name {
+    font-size: 1.1rem;
+  }
+  
+  .detail-position {
+    font-size: 1.5rem;
+  }
+  
+  .detail-company {
+    font-size: 1.1rem;
+  }
+  
+  .detail-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .linkedin-cta {
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+  }
+  
+  .cta-title {
+    font-size: 1.5rem;
+  }
+  
+  .linkedin-button {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    padding-left: 40px;
+  }
+  
+  .timeline-marker {
+    left: 0;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .experience-timeline::before {
+    left: 10px;
+  }
+  
+  .timeline-content {
+    padding: 0.8rem;
+  }
+  
+  .company-name {
+    font-size: 1rem;
+  }
+  
+  .position-title {
+    font-size: 1rem;
+  }
+  
+  .detail-card {
+    padding: 1.5rem;
+  }
+  
+  .detail-position {
+    font-size: 1.3rem;
+  }
+  
+  .achievement-item {
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .cta-title {
+    font-size: 1.3rem;
+  }
+  
+  .cta-description {
+    font-size: 1rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-item,
+  .achievement-item,
+  .linkedin-button {
+    transition: none;
+  }
+  
+  .timeline-item:hover,
+  .achievement-item:hover,
+  .linkedin-button:hover {
+    transform: none;
+  }
+  
+  .timelineGlow,
+  .slideInRight,
+  .codeScroll,
+  .charFlicker {
+    animation: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: more) {
+  .timeline-content,
+  .detail-card,
+  .linkedin-cta {
+    border-width: 2px;
+  }
+  
+  .achievement-item {
+    border-left-width: 4px;
+  }
+}
