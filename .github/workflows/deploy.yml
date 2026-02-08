@@ -28,5 +28,5 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist # Cambiá a 'build' si NO usás Vite (ej: Create React App)
+          folder: build # Cambiá a 'build' si NO usás Vite (ej: Create React App)
           branch: gh-pages
