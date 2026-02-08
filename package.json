@@ -1,6 +1,7 @@
 {
   "name": "leonardo-portfolio",
   "version": "1.0.0",
+  "homepage": "https://lsecotaro.github.io/personal-web/"
   "description": "Personal portfolio website for Leonardo Secotaro - Staff Engineer",
   "main": "index.js",
   "scripts": {
